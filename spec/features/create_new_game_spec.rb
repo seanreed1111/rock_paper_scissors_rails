@@ -1,5 +1,5 @@
 require "rails_helper"
-require "helpers/game_helper"
+
 
 RSpec.feature "User can create a new game" do
   scenario "by going to the home page" do

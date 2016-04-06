@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
-  
+  include GamesHelper
+
   before_action :item_params, only: :create
   def index
   end
@@ -8,7 +9,11 @@ class GamesController < ApplicationController
   end
 
   def create
-    @choice = params[:rps]
+    @player_choice = params[:rps]
+    game = Game.new(@player_choice)
+    game.play
+    @computer_choice = game.computer_choice
+    @winner = game.winner
   end
 
   private
