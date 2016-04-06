@@ -45,9 +45,13 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+ gem 'capybara', '~> 2.4'
+end
 
 gem 'haml-rails'
 gem 'bootstrap-sass'
+
 group :development, :test do
   gem 'rspec-rails'
 end
