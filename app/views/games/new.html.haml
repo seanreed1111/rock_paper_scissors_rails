@@ -1,0 +1,11 @@
+Which do you choose?
+=form_tag({action: "create", controller: "games", method: "post"} ) do
+  =radio_button_tag :rps, "Rock", checked: true
+  =label_tag :rps_rock, "Rock"
+  =radio_button_tag :rps, "Paper", false
+  =label_tag :rps_paper, "Paper"
+  =radio_button_tag :rps, "Scissors", false
+  =label_tag :rps_scissors, "Scissors"
+
+  =submit_tag "Go!"
+
