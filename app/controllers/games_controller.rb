@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   end
 
   def new
+    #render :new2  #new2 template is to use images for rock, paper, and scissors
   end
 
   def create
